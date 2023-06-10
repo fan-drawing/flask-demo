@@ -49,7 +49,7 @@ def hello_world():
 @app.route("/<name>")
 def hello(name):
   # return f"hello wrold {escape(name)}"
-  return render_template('base.html', name = name)
+  return render_template('demo.html', name = name)
 
 # @app.route("/apidemo", methods=["POST"])
 # class ApiDemo {
