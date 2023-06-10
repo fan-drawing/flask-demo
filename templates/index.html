@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/pretty-print-json@0.1/dist/pretty-print-json.css>
+  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pretty-print-json@0.1/dist/pretty-print-json.js"></script>
+  <title>Hello Welcome Flask</title>
+  <style>
+    .flex-group {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    .btn {
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-group">
+    {% for api in apis %}
+      <div class="btn btn__primary" onclick="postData('{{api.url}}', '{{api.type}}')"><p>{{ api.name }}</p></div>
+    {% endfor %}
+    <!-- <div class="btn btn__secondary"><p>Button</p></div> -->
+  </div>
+  <div class="outarea" style="padding:0 10px;">
+    <div id="preVlue" style="padding: 20px;background: #FFF;width: 100%;margin: 0 auto;border:1ps dashed #FFFFFF;"></div>
+  </div>
+  <div style="padding:0 20px;color: #FFF;line-height:2.0;">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </div>
+  <script>
+    var access_token = ''
+    var refresh_token = ''
+    function postData(url, type) {
+      axios({
+        method: type || 'post',
+        url: url,
+        data: {},
+        headers: {
+          "Authorization": url === '/refresh' ? (refresh_token ? ("Bearer " + refresh_token) : "" ) : access_token ? ("Bearer " + access_token) : ''
+        }
+      }).then((result) => {
+        if(result && result.data && result.data.access_token) {
+          access_token = result.data.access_token
+          if(result.data.refresh_token) {
+            refresh_token = result.data.refresh_token
+          }
+        }
+        document.getElementById("preVlue").innerHTML = prettyPrintJson.toHtml(result)
+      }).catch((err) => {
+        document.getElementById("preVlue").innerHTML = prettyPrintJson.toHtml(err)
+      });
+    }
+  </script>
+</body>
+</html>
+

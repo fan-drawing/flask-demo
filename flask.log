@@ -1,0 +1,140 @@
+2023-06-10 11:04:54,726 - WARNING - file_name:app.py - function:hello_world - lines:40 - message:Watch out!
+2023-06-10 11:06:15,956 - WARNING - file_name:app.py - function:hello_world - lines:40 - message:Watch out!
+2023-06-10 15:14:18,917 - WARNING - file_name:app.py - function:hello_world - lines:59 - message:Watch out!
+2023-06-10 15:14:22,135 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 77, in login
+    data.name,
+AttributeError: 'dict' object has no attribute 'name'
+2023-06-10 15:17:33,896 - WARNING - file_name:app.py - function:hello_world - lines:59 - message:Watch out!
+2023-06-10 15:17:34,728 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 77, in login
+    data.name,
+AttributeError: 'dict' object has no attribute 'name'
+2023-06-10 15:27:07,890 - WARNING - file_name:app.py - function:hello_world - lines:65 - message:Watch out!
+2023-06-10 16:53:59,058 - WARNING - file_name:app.py - function:hello_world - lines:65 - message:Watch out!
+2023-06-10 17:27:19,576 - WARNING - file_name:app.py - function:hello_world - lines:69 - message:Watch out!
+2023-06-10 17:27:23,944 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 17:32:18,209 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 17:33:18,004 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 17:33:59,030 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 17:34:52,631 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 19:03:34,300 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 19:16:24,778 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 19:16:45,000 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 35, in decorator
+    if claims["is_administrator"]:
+KeyError: 'is_administrator'
+2023-06-10 19:17:12,869 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 35, in decorator
+    if claims["is_administrator"]:
+KeyError: 'is_administrator'
+2023-06-10 19:18:05,541 - WARNING - file_name:app.py - function:hello_world - lines:74 - message:Watch out!
+2023-06-10 19:18:10,581 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 35, in decorator
+    if claims["is_administrator"]:
+KeyError: 'is_administrator'
+2023-06-10 19:20:45,695 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:22:27,663 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:23:46,885 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:23:54,106 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 36, in decorator
+    if claims["is_administrator"]:
+KeyError: 'is_administrator'
+2023-06-10 19:27:13,787 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:27:59,614 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:28:34,217 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:29:01,342 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:29:38,462 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:29:46,013 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:30:06,209 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:30:14,848 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 36, in decorator
+    if claims["is_administrator"]:
+KeyError: 'is_administrator'
+2023-06-10 19:30:43,593 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:30:53,599 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask/app.py", line 36, in decorator
+    if claims["is_administrator"]:
+KeyError: 'is_administrator'
+2023-06-10 19:31:25,536 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:32:34,120 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:34:11,585 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:36:19,293 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:36:43,210 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:37:04,442 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:38:16,469 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 19:38:51,218 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 20:21:14,612 - WARNING - file_name:app.py - function:hello_world - lines:75 - message:Watch out!
+2023-06-10 21:01:52,195 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
