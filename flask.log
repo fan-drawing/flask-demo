@@ -492,3 +492,650 @@ Traceback (most recent call last):
 jinja2.exceptions.TemplateNotFound: base.html
 2023-06-11 09:26:44,495 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
 2023-06-11 09:26:46,627 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
+2023-06-11 09:27:45,986 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
+2023-06-11 09:27:58,288 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
+2023-06-11 09:44:29,601 - WARNING - file_name:app.py - function:hello_world - lines:48 - message:Watch out!
+2023-06-11 10:11:38,627 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 34, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 22, in insert_user
+    conn = g.db
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:17:29,739 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 19, in insert_user
+    conn = g.db
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:20:11,980 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 19, in insert_user
+    conn = g.db
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:22:42,819 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 32, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 20, in insert_user
+    conn = g.db
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:23:48,647 - WARNING - file_name:app.py - function:hello_world - lines:60 - message:Watch out!
+2023-06-11 10:28:30,111 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 22, in insert_user
+    cursor.execute(sql, (username, password))
+sqlite3.OperationalError: table user has 3 columns but 2 values were supplied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 26, in insert_user
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+TypeError: insert error:table user has 3 columns but 2 values were supplied
+2023-06-11 10:32:26,385 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 22, in insert_user
+    cursor.execute(sql, ('', username, password))
+sqlite3.IntegrityError: datatype mismatch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 26, in insert_user
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+TypeError: insert error:datatype mismatch
+2023-06-11 10:32:35,222 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 22, in insert_user
+    cursor.execute(sql, ('', username, password))
+sqlite3.IntegrityError: datatype mismatch
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 26, in insert_user
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+TypeError: insert error:datatype mismatch
+2023-06-11 10:34:18,718 - WARNING - file_name:app.py - function:hello_world - lines:59 - message:Watch out!
+2023-06-11 10:35:01,128 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 22, in insert_user
+    cursor.execute(sql, (None, username, password))
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 26, in insert_user
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+TypeError: insert error:UNIQUE constraint failed: user.username
+2023-06-11 10:35:02,478 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 22, in insert_user
+    cursor.execute(sql, (None, username, password))
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 31, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 26, in insert_user
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+TypeError: insert error:UNIQUE constraint failed: user.username
+2023-06-11 10:35:21,538 - WARNING - file_name:app.py - function:hello_world - lines:59 - message:Watch out!
+2023-06-11 10:37:22,775 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 36, in hello_world
+    rows= query_db("select * from user")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 28, in query_db
+    cur=g.db.execute(query, args)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:37:40,699 - WARNING - file_name:app.py - function:hello_world - lines:65 - message:Watch out!
+2023-06-11 10:45:17,461 - WARNING - file_name:app.py - function:hello_world - lines:66 - message:Watch out!
+2023-06-11 10:45:49,767 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:46:48,025 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:46:49,049 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:46:49,220 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:46:49,372 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:47:28,123 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:48:23,725 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:48:33,026 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:50:47,199 - WARNING - file_name:app.py - function:hello_world - lines:65 - message:Watch out!
+2023-06-11 10:50:53,811 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/utils/token.py", line 16, in decorator
+    return fn(*args, **kwargs)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 81, in protected
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:51:39,249 - WARNING - file_name:app.py - function:hello_world - lines:65 - message:Watch out!
+2023-06-11 10:52:23,705 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:52:57,002 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:52:57,068 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:52:59,660 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:52:59,721 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:53:20,936 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:53:20,998 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:53:38,820 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:53:38,881 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 10:54:08,255 - WARNING - file_name:app.py - function:hello_world - lines:66 - message:Watch out!
+2023-06-11 10:54:14,728 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/utils/token.py", line 16, in decorator
+    return fn(*args, **kwargs)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 82, in protected
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:54:58,861 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 10:55:01,172 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/utils/token.py", line 16, in decorator
+    return fn(*args, **kwargs)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 83, in protected
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:55:29,881 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 10:55:31,429 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/utils/token.py", line 16, in decorator
+    return fn(*args, **kwargs)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 83, in protected
+    print(g.db)
+  File "/usr/local/lib/python3.8/site-packages/flask/ctx.py", line 54, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: db
+2023-06-11 10:57:22,755 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 10:57:34,898 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 10:58:26,130 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /protected [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/utils/token.py", line 16, in decorator
+    return fn(*args, **kwargs)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 83, in protected
+    rows = query_db("select * from user")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 30, in query_db
+    cur= g.db.get_db().execute(query, args)
+AttributeError: 'sqlite3.Connection' object has no attribute 'get_db'
+2023-06-11 10:59:17,642 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 11:00:22,994 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 11:01:50,513 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 11:01:50,585 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1487, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1506, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1829, in make_response
+    raise TypeError(
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1825, in make_response
+    rv = self.response_class.force_type(
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/wrappers/response.py", line 237, in force_type
+    response = Response(*run_wsgi_app(response, environ))
+  File "/usr/local/lib/python3.8/site-packages/werkzeug/test.py", line 1344, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: function takes exactly 1 argument (2 given)
+The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a Connection.
+2023-06-11 11:02:16,542 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 11:02:43,432 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 24, in insert_user
+    cursor.execute(sql, (None, username, password))
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 37, in hello_world
+    insert_user("陈佳兴", "123123")
+  File "/Users/zhangyang/Downloads/python/flask-demo/app.py", line 28, in insert_user
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+TypeError: insert error:UNIQUE constraint failed: user.username
+2023-06-11 11:02:51,657 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 11:07:02,397 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 11:07:09,466 - WARNING - file_name:app.py - function:hello_world - lines:67 - message:Watch out!
+2023-06-11 11:09:39,252 - WARNING - file_name:app.py - function:hello_world - lines:39 - message:人员插入异常!
+2023-06-11 11:09:39,805 - WARNING - file_name:app.py - function:hello_world - lines:39 - message:人员插入异常!
+2023-06-11 11:09:40,011 - WARNING - file_name:app.py - function:hello_world - lines:39 - message:人员插入异常!
+2023-06-11 11:09:40,201 - WARNING - file_name:app.py - function:hello_world - lines:39 - message:人员插入异常!
+2023-06-11 11:09:40,361 - WARNING - file_name:app.py - function:hello_world - lines:39 - message:人员插入异常!
+2023-06-11 11:09:40,543 - WARNING - file_name:app.py - function:hello_world - lines:39 - message:人员插入异常!

@@ -1,21 +1,45 @@
 # from markupsafe import escape
+import sqlite3 as sq 
 from utils.sets import init_base_sets
 from utils.log import init_app_login
+import utils.db as SqlLite
 from utils.token import init_app_token,check_required
 import urllib
-from flask import Flask,flash,render_template,request,make_response,jsonify
+from flask import Flask,flash,render_template,request,make_response,jsonify,Blueprint,current_app,g
 import json
 from flask_jwt_extended import get_jwt,create_access_token,get_jwt_identity,create_refresh_token,jwt_required
 app = Flask(__name__)
-
+# with app.test_request_context():
+#   # app.preprocess_request()
+#   SqlLite.init_app(app)
+SqlLite.init_app(app)
 init_base_sets(app)
 init_app_login(app)
 jwt = init_app_token(app)
-
+def insert_user(username, password):
+  sql = "insert into user values (?, ?, ?)"
+  conn = g.db
+  cursor = conn.cursor()
+  try:
+    cursor.execute(sql, (None, username, password))
+    conn.commit()
+  except Exception as e:
+    conn.rollback()
+    raise TypeError("insert error:{}".format(e)) #抛出异常
+def query_db(query, args=(), one=False):
+    cur= g.db.execute(query, args)
+    rv=[dict((cur.description[idx][0], value) for idx,value in enumerate(row)) for row in cur.fetchall()]
+    return (rv[0] if rv else None) if one else rv
 @app.route("/")
 def hello_world():
   # 消息闪现
-  flash('You were successfully logged in')
+  try:
+    insert_user("陈佳兴", "123123")
+  except:
+    app.logger.warning('人员插入异常!')
+    flash('人员插入异常')
+  # rows= query_db("select * from user")
+  # print(rows)
   resp = make_response(render_template('index.html',apis = [
     {
       'url': '/login',
@@ -43,7 +67,6 @@ def hello_world():
     resp.set_cookie('username', urllib.parse.quote('陈佳兴'),max_age=24*60*60)
   else:
     print(urllib.parse.unquote(username))
-  app.logger.warning('Watch out!')
   return resp
 
 @app.route("/<name>")
@@ -51,21 +74,17 @@ def hello(name):
   # return f"hello wrold {escape(name)}"
   return render_template('demo.html', name = name)
 
-# @app.route("/apidemo", methods=["POST"])
-# class ApiDemo {
-# }
-
-
 @app.route("/protected", methods=["POST"])
 @check_required()
 def protected():
-  return jsonify(foo="bar")
+  rows = query_db("select * from user")
+  print(rows)
+  return jsonify(foo = "bar", rows = rows)
 
 @app.route("/refresh", methods=["POST"])
 @jwt_required(refresh=True) # 刷新token的装饰器，这是最新的写法
 def refresh():
   identity = get_jwt_identity()
-  print(identity)
   additional_claims = get_jwt()
   access_token = create_access_token(
     identity=identity, 

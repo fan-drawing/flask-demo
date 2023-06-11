@@ -304,6 +304,12 @@ Flask 框架笔记
 
 
 # 数据库连接及使用
+
+  学习案例使用 sqlite3 数据库
+
+  请先安装 pip3 install pysqlite3
+
+  flask init-db 初始数据库 创建对应的文件（无文件情况下）
   
   安装
 
