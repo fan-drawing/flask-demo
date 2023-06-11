@@ -305,13 +305,45 @@ Flask 框架笔记
 
 # 数据库连接及使用
 
-  学习案例使用 sqlite3 数据库
+  ## 学习案例使用 sqlite3 数据库
 
   请先安装 pip3 install pysqlite3
 
   flask init-db 初始数据库 创建对应的文件（无文件情况下）
+
+
+  ### 前提条件我们要了解 flask 的上下文
   
-  安装
+  from flask import current_app, g
+
+  #### current_app : current_app是线程、协程隔离对象
+    
+    AppContext、RequestContext、Flask与Request之间的关系
+    AppContext
+    应用上下文，是对flask一切对象的封装
+
+    RequestContext
+    请求上下文，是对request请求对象的封装
+    current_app
+    类型是LocalProxy
+    像全局变量一样工作，但只能在处理请求期间且在处理它的线程中访问
+    返回的栈顶元素不是应用上下文，而是flask的应用实例对象
+
+    应用上下文的封装=flask核心对象+和外部协作对象（再flask封装对象上再添加push、pop等）（请求上下文同理）
+  #### g 对象
+  
+
+  // 等待上下文存在时
+  with app.app_context():
+    // 写入配置参数
+    current_app.config['SQLLITE_NAME'] = "my-test.db"
+    // 初始化数据库配置
+    SqlLite.init_sql(app)
+
+
+
+  
+  ## mysql 安装
 
   pip3 install pymysql 
   pip3 install flask-sqlalchemy 
@@ -319,6 +351,30 @@ Flask 框架笔记
   ORM模型和表的映射
 
 # Flask蓝图美化文件层级划分
+
+  from flask import Blueprint
+
+  Blueprint 就是蓝图
+
+  ## 创建拓展文件
+
+  具体使用 添加一个 extend.py 文件
+   
+  ```extend.py 被Python解释器执行时（脚本），__name__ 这个变量的值就是 "__main__"，如果这个 extend.py 是被 import 到别的文件中执行的话（库），此时的 __name__ 的值就为该导入的库包的文件名extend，那当然不等于 "__main__"```
+
+  from flask import Blueprint,render_template
+  extend = Blueprint('extend', __name__)
+  @extend.route("/<name>")
+  def hello(name):
+    # return f"hello wrold {escape(name)}"
+    return render_template('demo.html', name = name)
+
+  ## 注入拓展文件
+
+  from extend import extend
+  app.register_blueprint(extend)
+
+
 
 # 依赖包导出
 pip3 install pipreqs

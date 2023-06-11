@@ -4,18 +4,25 @@ from utils.sets import init_base_sets
 from utils.log import init_app_login
 import utils.db as SqlLite
 from utils.token import init_app_token,check_required
+from extend import extend
 import urllib
-from flask import Flask,flash,render_template,request,make_response,jsonify,Blueprint,current_app,g
+from flask import Flask,flash,render_template,request,make_response,jsonify,current_app,g
 import json
 from flask_jwt_extended import get_jwt,create_access_token,get_jwt_identity,create_refresh_token,jwt_required
 app = Flask(__name__)
-# with app.test_request_context():
-#   # app.preprocess_request()
-#   SqlLite.init_app(app)
-SqlLite.init_app(app)
+
 init_base_sets(app)
 init_app_login(app)
+
+with app.app_context():
+  current_app.config['SQLLITE_NAME'] = "my-test.db"
+  SqlLite.init_sql(app)
+
 jwt = init_app_token(app)
+
+# 蓝图注入
+app.register_blueprint(extend)
+
 def insert_user(username, password):
   sql = "insert into user values (?, ?, ?)"
   conn = g.db
@@ -35,9 +42,9 @@ def hello_world():
   # 消息闪现
   try:
     insert_user("陈佳兴", "123123")
-  except:
-    app.logger.warning('人员插入异常!')
-    flash('人员插入异常')
+  except Exception as e:
+    app.logger.warning("insert error:{}".format(e))
+    flash("insert error:{}".format(e))
   # rows= query_db("select * from user")
   # print(rows)
   resp = make_response(render_template('index.html',apis = [
@@ -68,11 +75,6 @@ def hello_world():
   else:
     print(urllib.parse.unquote(username))
   return resp
-
-@app.route("/<name>")
-def hello(name):
-  # return f"hello wrold {escape(name)}"
-  return render_template('demo.html', name = name)
 
 @app.route("/protected", methods=["POST"])
 @check_required()
