@@ -1,4 +1,4 @@
-from markupsafe import escape
+# from markupsafe import escape
 from utils.sets import init_base_sets
 from utils.log import init_app_login
 from utils.token import init_app_token,check_required

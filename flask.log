@@ -490,3 +490,5 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.8/site-packages/flask/templating.py", line 98, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: base.html
+2023-06-11 09:26:44,495 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
+2023-06-11 09:26:46,627 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:Watch out!
