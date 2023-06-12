@@ -164,6 +164,22 @@ Flask 框架笔记
 
   除了请求对象之外还有一种称为 session 的对象，允许您在不同请求 之间储存信息。这个对象相当于用密钥签名加密的 cookie ，即用户可以查看您的 cookie ，但是如果没有密钥就无法修改它。
 
+  ## wraps+装饰器
+
+  @wraps相当于是装饰器的装饰器
+
+  def permission_required(permission_name):#闭包第一层，用来获取装饰器传入的变量"permission_name"
+	    def decorator(func):#闭包第二层，用来获取被装饰函数
+			@wraps(func)#这里面又是三层闭包来实现保留原函数一些特有属性
+			def decorated_function(*args, **kwargs):#闭包第三层，用来获取被装饰函数manage传入的变量
+			    if not current_user.can(permission_name):  #这里是检查用户是否有该权限
+			        abort(403)
+			    return func(*args, **kwargs)
+			return decorated_function
+	    return decorator
+  @permission_required("permission_name")
+  def manage():
+    pass	
 
   ## token 认证
 
@@ -330,6 +346,7 @@ Flask 框架笔记
     返回的栈顶元素不是应用上下文，而是flask的应用实例对象
 
     应用上下文的封装=flask核心对象+和外部协作对象（再flask封装对象上再添加push、pop等）（请求上下文同理）
+
   #### g 对象
   
 

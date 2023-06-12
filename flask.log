@@ -2,3 +2,6 @@
 2023-06-11 12:32:40,287 - WARNING - file_name:app.py - function:hello_world - lines:41 - message:insert error:insert error:UNIQUE constraint failed: user.username
 2023-06-11 12:33:03,084 - WARNING - file_name:app.py - function:hello_world - lines:41 - message:insert error:insert error:UNIQUE constraint failed: user.username
 2023-06-11 12:58:29,683 - WARNING - file_name:app.py - function:hello_world - lines:41 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-11 14:54:05,506 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-12 13:56:02,098 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-12 13:56:09,379 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
