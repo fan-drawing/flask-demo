@@ -169,7 +169,7 @@ Flask 框架笔记
   @wraps相当于是装饰器的装饰器
 
   def permission_required(permission_name):#闭包第一层，用来获取装饰器传入的变量"permission_name"
-	    def decorator(func):#闭包第二层，用来获取被装饰函数
+    def decorator(func):#闭包第二层，用来获取被装饰函数
 			@wraps(func)#这里面又是三层闭包来实现保留原函数一些特有属性
 			def decorated_function(*args, **kwargs):#闭包第三层，用来获取被装饰函数manage传入的变量
 			    if not current_user.can(permission_name):  #这里是检查用户是否有该权限

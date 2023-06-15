@@ -5,3 +5,85 @@
 2023-06-11 14:54:05,506 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
 2023-06-12 13:56:02,098 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
 2023-06-12 13:56:09,379 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-13 11:00:00,024 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-13 15:46:18,963 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /extend/name [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 31, in hello
+    print(list(list_data))
+TypeError: 'ResultSet' object is not callable
+2023-06-13 15:47:16,502 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /extend/name [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 32, in hello
+    print(list(list_data))
+TypeError: 'ResultSet' object is not callable
+2023-06-13 15:50:26,304 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /extend/name [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 33, in hello
+    list_data.append(htmlToJson(item))
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 20, in htmlToJson
+    soup = BeautifulSoup(str,'html.parser')
+  File "/usr/local/lib/python3.8/site-packages/bs4/__init__.py", line 314, in __init__
+    markup = markup.read()
+TypeError: 'NoneType' object is not callable
+2023-06-13 15:51:14,740 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /extend/name [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 33, in hello
+    list_data.append(htmlToJson(item))
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 20, in htmlToJson
+    soup = BeautifulSoup(str,'html.parser')
+  File "/usr/local/lib/python3.8/site-packages/bs4/__init__.py", line 314, in __init__
+    markup = markup.read()
+TypeError: 'NoneType' object is not callable
+2023-06-13 15:52:06,953 - ERROR - file_name:app.py - function:log_exception - lines:1414 - message:Exception on /extend/name [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 32, in hello
+    list_data.append(htmlToJson(item))
+  File "/Users/zhangyang/Downloads/python/flask-demo/extend.py", line 20, in htmlToJson
+    print(BeautifulSoup(html,'html.parser'))
+  File "/usr/local/lib/python3.8/site-packages/bs4/__init__.py", line 314, in __init__
+    markup = markup.read()
+TypeError: 'NoneType' object is not callable
+2023-06-13 16:49:05,051 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-13 16:49:09,651 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-13 16:51:11,392 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-13 16:53:22,429 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username

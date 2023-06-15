@@ -17,11 +17,11 @@ init_app_login(app)
 with app.app_context():
   current_app.config['SQLLITE_NAME'] = "my-test.db"
   SqlLite.init_sql(app)
-
+  
 jwt = init_app_token(app)
 
 # 蓝图注入
-app.register_blueprint(extend)
+app.register_blueprint(extend, url_prefix = '/extend') # 设置路由前缀 访问 /extend/xxx
 
 def insert_user(username, password):
   sql = "insert into user values (?, ?, ?)"
@@ -33,10 +33,12 @@ def insert_user(username, password):
   except Exception as e:
     conn.rollback()
     raise TypeError("insert error:{}".format(e)) #抛出异常
+  
 def query_db(query, args=(), one=False):
     cur= g.db.execute(query, args)
     rv=[dict((cur.description[idx][0], value) for idx,value in enumerate(row)) for row in cur.fetchall()]
     return (rv[0] if rv else None) if one else rv
+
 @app.route("/")
 def hello_world():
   # 消息闪现
