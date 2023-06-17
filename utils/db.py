@@ -16,7 +16,6 @@ def init_db_command():
   click.echo('Initialized the database.')
   
 def set_db():
-  print('初始化数据库连接')
   if 'db' not in g:
     g.db = sqlite3.connect(
       current_app.config['SQLLITE_NAME'],
@@ -25,18 +24,15 @@ def set_db():
     g.db.row_factory = sqlite3.Row
 
 def get_db():
-  print('初始化数据库连接')
-  if 'db' not in g:
-    g.db = sqlite3.connect(
-      current_app.config['SQLLITE_NAME'],
-      detect_types=sqlite3.PARSE_DECLTYPES
-    )
-    g.db.row_factory = sqlite3.Row
-  return g.db
+  db = sqlite3.connect(
+    current_app.config['SQLLITE_NAME'],
+    detect_types=sqlite3.PARSE_DECLTYPES
+  )
+  db.row_factory = sqlite3.Row
+  return db
  
 def close_db(e=None):
   db = g.pop('db', None)
-  print('数据库关闭')
   if db is not None:
     db.close()
 

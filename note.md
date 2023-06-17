@@ -349,7 +349,6 @@ Flask 框架笔记
 
   #### g 对象
   
-
   // 等待上下文存在时
   with app.app_context():
     // 写入配置参数
