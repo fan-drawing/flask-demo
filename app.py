@@ -16,6 +16,7 @@ from flask_jwt_extended import get_jwt,create_access_token,get_jwt_identity,crea
 app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+# 公共配置文件 
 app.config.from_pyfile('config.ini')
 print(app.config['UPLOAD_FOLDER'])
 init_base_sets(app)
