@@ -1,16 +1,23 @@
 # from markupsafe import escape
-import sqlite3 as sq 
+# from werkzeug import secure_filename
+import csv
+import random
+import sqlite3 as sq
+import time 
 from utils.sets import init_base_sets
 from utils.log import init_app_login
 import utils.db as SqlLite
 from utils.token import init_app_token,check_required
 from extend import extend
 import urllib
-from flask import Flask,flash,render_template,request,make_response,jsonify,current_app,g
+from flask import Response,Flask,flash,render_template,request,make_response,jsonify,current_app,g
 import json
 from flask_jwt_extended import get_jwt,create_access_token,get_jwt_identity,create_refresh_token,jwt_required
 app = Flask(__name__)
 
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+app.config.from_pyfile('config.ini')
+print(app.config['UPLOAD_FOLDER'])
 init_base_sets(app)
 init_app_login(app)
 
@@ -70,6 +77,11 @@ def hello_world():
       'type': 'post',
       'name': '更新 token'
     },
+    {
+      'url': '/stream',
+      'type': 'post',
+      'name': '获取数据'
+    },
   ]))
   username = request.cookies.get('username')
   if not username:
@@ -128,5 +140,52 @@ def login():
       "errMsg": '接口权限异常'
     })
     return response, 401, {"Content-Type": "application/json"}
+  
+# @app.route('/nyc_squirrels.csv')
+# def generate_large_csv():
+#     def generate():
+#       for row in iter_all_rows():
+#         print(row)
+#         yield f"{','.join(row)}\n"
+#     return Response(generate(), mimetype = "text/csv")
+
+
+TEXTS = [
+    '你好',
+    '这是一段很长很长很长的文本信息，用于演示如何实现流式响应',
+    'Hello world',
+    'Python是世界上最受欢迎的编程语言之一',
+    '天青色等烟雨，而我在等你',
+]
+
+
+@app.route('/stream', methods=['GET','POST'])
+def stream():
+    def generate():
+        long_text = ''
+        dunum = 1
+        while True:
+          dunum+=1
+          text = random.choice(TEXTS)
+          yield f'{text}\n'
+          print(text, end="", flush=True),
+          time.sleep(random.uniform(1, 0.800))  # 随机停顿30~800毫秒后返回下一部分数据
+          long_text+=text
+          if dunum == 16:
+            return long_text
+            break
+    return Response(generate(), mimetype='text/event-stream')
+
+@app.route('/readStream', methods=['GET','POST'])
+def readStream():
+    def generate():
+      # long_text = '开始'
+      with open('nyc_squirrels.csv', 'r') as f:
+        reader = csv.reader(f)
+        for row in reader:
+          yield f"{'#'+','.join(row)+'#'}\n"
+          time.sleep(random.uniform(0.100, 0.200))
+    return Response(generate(), mimetype='text/event-stream')
+
 if __name__ == '__main__':
   app.run(debug = True, port=5000)

@@ -87,3 +87,10 @@ TypeError: 'NoneType' object is not callable
 2023-06-13 16:49:09,651 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
 2023-06-13 16:51:11,392 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
 2023-06-13 16:53:22,429 - WARNING - file_name:app.py - function:hello_world - lines:46 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:08:22,500 - WARNING - file_name:app.py - function:hello_world - lines:52 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:09:59,096 - WARNING - file_name:app.py - function:hello_world - lines:52 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:15:06,789 - WARNING - file_name:app.py - function:hello_world - lines:52 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:19:01,995 - WARNING - file_name:app.py - function:hello_world - lines:52 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:19:30,007 - WARNING - file_name:app.py - function:hello_world - lines:52 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:21:36,365 - WARNING - file_name:app.py - function:hello_world - lines:54 - message:insert error:insert error:UNIQUE constraint failed: user.username
+2023-06-18 10:25:14,554 - WARNING - file_name:app.py - function:hello_world - lines:54 - message:insert error:insert error:UNIQUE constraint failed: user.username
