@@ -23,7 +23,7 @@ init_base_sets(app)
 init_app_login(app)
 
 with app.app_context():
-  current_app.config['SQLLITE_NAME'] = "my-test.db"
+  current_app.config['SQLLITE_NAME'] = "./db/my-test.db"
   SqlLite.init_sql(app)
   
 jwt = init_app_token(app)
@@ -169,7 +169,7 @@ def stream():
           dunum+=1
           text = random.choice(TEXTS)
           yield f'{text}\n'
-          print(text, end="", flush=True),
+          # print(text, end="", flush=True),
           time.sleep(random.uniform(1, 0.800))  # 随机停顿30~800毫秒后返回下一部分数据
           long_text+=text
           if dunum == 16:
