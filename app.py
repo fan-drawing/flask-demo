@@ -150,7 +150,6 @@ def login():
 #         yield f"{','.join(row)}\n"
 #     return Response(generate(), mimetype = "text/csv")
 
-
 TEXTS = [
     '你好',
     '这是一段很长很长很长的文本信息，用于演示如何实现流式响应',
@@ -158,7 +157,6 @@ TEXTS = [
     'Python是世界上最受欢迎的编程语言之一',
     '天青色等烟雨，而我在等你',
 ]
-
 
 @app.route('/stream', methods=['GET','POST'])
 def stream():
