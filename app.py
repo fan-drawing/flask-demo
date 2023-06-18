@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 # 公共配置文件 
-app.config.from_pyfile('config.ini')
+app.config.from_pyfile('./config/config.ini')
 print(app.config['UPLOAD_FOLDER'])
 init_base_sets(app)
 init_app_login(app)
@@ -181,7 +181,7 @@ def stream():
 def readStream():
     def generate():
       # long_text = '开始'
-      with open('nyc_squirrels.csv', 'r') as f:
+      with open('./csv/nyc_squirrels.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
           yield f"{'#'+','.join(row)+'#'}\n"
